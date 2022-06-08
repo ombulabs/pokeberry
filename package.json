@@ -2,7 +2,6 @@
   "name": "@ombulabs/pokeberry",
   "private": true,
   "version": "0.0.1",
-  "type": "module",
   "files": [
     "dist",
     "README.md",
@@ -21,7 +20,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "test": "jest"
+    "test": "cypress open --component"
   },
   "dependencies": {
     "react": ">=16.8.0",
@@ -32,6 +31,8 @@
     "react-dom": ">=16.8.0"
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.10.0",
+    "@cypress/react": "^5.12.5",
     "@swc/core": "^1.2.196",
     "@swc/jest": "^0.2.21",
     "@testing-library/dom": "^8.13.0",
@@ -44,6 +45,7 @@
     "@typescript-eslint/eslint-plugin": "^5.26.0",
     "@typescript-eslint/parser": "^5.26.0",
     "@vitejs/plugin-react": "^1.3.0",
+    "cypress": "^10.0.3",
     "eslint": "^8.16.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
