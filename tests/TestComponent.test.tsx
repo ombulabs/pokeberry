@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react"
-import { TestComponent } from "../lib/components/TestComponent/index"
+import { TestComponent } from "../instrumented/components/TestComponent/index"
 
 test("", async() => {
     const { getByText } = render(<TestComponent foo="bruh"/>)

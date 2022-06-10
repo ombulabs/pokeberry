@@ -20,7 +20,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "test": "cypress open --component"
+    "pretest": "nyc instrument lib instrumented",
+    "test": "nyc cypress open --component"
   },
   "dependencies": {
     "react": ">=16.8.0",
@@ -33,6 +34,7 @@
   "devDependencies": {
     "@cypress/code-coverage": "^3.10.0",
     "@cypress/react": "^5.12.5",
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
     "@swc/core": "^1.2.196",
     "@swc/jest": "^0.2.21",
     "@testing-library/dom": "^8.13.0",
