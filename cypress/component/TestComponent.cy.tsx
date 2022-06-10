@@ -1,4 +1,4 @@
-import { TestComponent } from '../../lib'
+import { TestComponent } from '../../instrumented'
 
 describe('TestComponent.cy.ts', () => {
   it('playground', () => {
