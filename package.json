@@ -20,7 +20,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "pretest": "nyc instrument lib instrumented",
+    "pretest": "nyc instrument lib instrumented && nyc instrument src instrumented",
     "test": "nyc cypress open --component",
     "open-coverage-report": "open-cli coverage/lcov-report/index.html"
   },
