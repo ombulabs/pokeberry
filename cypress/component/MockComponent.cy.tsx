@@ -1,4 +1,4 @@
-import MockComponent from '../fixtures/MockComponent'
+import MockComponent from '../../src/demos/MockComponent'
 
 describe('TestComponent.cy.ts', () => {
     it('playground', () => {
