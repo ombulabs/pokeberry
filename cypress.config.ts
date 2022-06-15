@@ -15,10 +15,8 @@ export default defineConfig({
   },
   e2e: {
     setupNodeEvents(on, config) {
-      require('@cypress/code-coverage/task')(on, config)
       on('task', codeCoverageTask(on, config))
       return config
     },
-    supportFile: false
   }
 });

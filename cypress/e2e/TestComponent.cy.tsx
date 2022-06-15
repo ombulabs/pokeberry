@@ -1,8 +1,6 @@
-import { TestComponent } from '../../instrumented/'
-
 describe('TestComponent.cy.ts', () => {
   it('playground', () => {
-    cy.mount(<TestComponent foo='Lipsum' />)
+    cy.visit('http://localhost:3000/test-component')
     cy.get('div').should('contain.text', 'Hello, world!')
   })
 })

@@ -1,12 +1,17 @@
 import React from 'react';
 import { Link, useLocation, useRoutes } from 'react-router-dom';
-import TestDemo from '../instrumented/demos/TestDemo';
+import TestDemo from './demos/TestDemo';
+import TestComponent from  '../instrumented/components/TestComponent/TestComponent'
 import './App.css';
 
 const DEMOS = [
   {
-    path: 'test-component',
+    path: 'test-hook',
     element: <TestDemo />,
+  },
+  {
+    path: 'test-component',
+    element: <TestComponent foo='bar'/>,
   },
 ];
 
