@@ -1,7 +1,9 @@
-import { TestComponent } from '../../lib';
+import { useTestHook } from "../../lib/hooks/TestHook";
 
-const TestDemo = () => {
-  return <TestComponent foo='bar' />;
+const MockComponent: React.FC = () => {
+  const testHookAcceptedValue = "bar"
+  const [someState, someStateLoading] = useTestHook(testHookAcceptedValue)
+  return <div>{someState} {someStateLoading.toString()}</div>;
 };
 
-export default TestDemo;
+export default MockComponent;

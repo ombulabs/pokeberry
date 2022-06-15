@@ -18,6 +18,7 @@ export default defineConfig({
       require('@cypress/code-coverage/task')(on, config)
       on('task', codeCoverageTask(on, config))
       return config
-    }
+    },
+    supportFile: false
   }
 });

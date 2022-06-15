@@ -1,8 +1,6 @@
-import MockComponent from '../../instrumented/demos/MockComponent'
-
 describe('TestComponent.cy.ts', () => {
     it('playground', () => {
-      cy.mount(<MockComponent />)
+      cy.visit('http://localhost:3000/test-component')
       cy.get('div').should('contain.text', 'baz false')
     })
   })

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation, useRoutes } from 'react-router-dom';
-import TestDemo from './demos/TestDemo';
+import TestDemo from '../instrumented/demos/TestDemo';
 import './App.css';
 
 const DEMOS = [

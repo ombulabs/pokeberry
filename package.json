@@ -21,8 +21,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "pretest": "nyc instrument lib instrumented && nyc instrument src instrumented",
-    "test": "nyc cypress open --component",
-    "open-coverage-report": "open-cli coverage/lcov-report/index.html"
+    "test-component": "nyc cypress open --component",
+    "test-e2e": "yarn cypress open",
+    "server-and-test": "yarn run dev & yarn cypress open --e2e && kill %1"
   },
   "dependencies": {
     "react": ">=16.8.0",
