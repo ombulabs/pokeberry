@@ -51,6 +51,7 @@
     "babel-plugin-istanbul": "^6.1.1",
     "concurrently": "^7.2.2",
     "cypress": "^10.0.3",
+    "del": "^6.1.1",
     "eslint": "^8.16.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",

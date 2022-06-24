@@ -1,5 +1,6 @@
 import { defineConfig } from "cypress";
 import codeCoverageTask from "@cypress/code-coverage/task";
+import del from 'del';
 
 export default defineConfig({
   component: {
@@ -16,6 +17,11 @@ export default defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       on('task', codeCoverageTask(on, config))
+      on('after:spec', (_, results) => {
+        if (results.stats.failures === 0 && results.video) {
+            return del(results.video)
+        }
+      })
       return config
     },
   }
