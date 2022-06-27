@@ -1,3 +1,4 @@
+import { spawnSync } from "child_process";
 import { defineConfig } from "cypress";
 import codeCoverageTask from "@cypress/code-coverage/task";
 import del from 'del';
@@ -16,6 +17,7 @@ export default defineConfig({
   },
   e2e: {
     setupNodeEvents(on, config) {
+      spawnSync('yarn', ['instrument'])
       on('task', codeCoverageTask(on, config))
       on('after:spec', (_, results) => {
         if (results.stats.failures === 0 && results.video) {
