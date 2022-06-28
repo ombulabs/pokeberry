@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation, useRoutes } from 'react-router-dom';
 import TestDemo from './demos/TestDemo';
-import TestComponent from  '../instrumented/components/TestComponent/TestComponent'
+import TestComponent from  '../lib/components/TestComponent/TestComponent'
 import './App.css';
 
 const DEMOS = [

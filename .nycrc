@@ -1,7 +1,5 @@
 {
     "extends": "/nyc.config.js",
     "all": true,
-    "check-coverage": true,
-    "include": ["lib/components/**/*.tsx", "lib/hooks/**/*.ts"],
-    "exclude": ["lib/**/index.ts"]
+    "check-coverage": true
 }
