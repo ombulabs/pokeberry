@@ -1,4 +1,3 @@
-// import { useTestHook } from "../../instrumented/hooks/TestHook/TestHook";
 import { useTestHook } from '../../lib/hooks';
 
 const MockComponent: React.FC = () => {
