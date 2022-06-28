@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation, useRoutes } from 'react-router-dom';
 import TestDemo from './demos/TestDemo';
-import TestComponent from  '../instrumented/components/TestComponent/TestComponent'
+import NextTest from './demos/NextTest';
 import './App.css';
 
 const DEMOS = [
@@ -10,8 +10,8 @@ const DEMOS = [
     element: <TestDemo />,
   },
   {
-    path: 'test-component',
-    element: <TestComponent foo='bar'/>,
+    path: 'next-test',
+    element: <NextTest />,
   },
 ];
 

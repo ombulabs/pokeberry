@@ -20,10 +20,19 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "instrument": "nyc instrument lib instrumented",
-    "test": "nyc cypress run",
-    "browser-test": "nyc cypress open",
-    "server-and-test": "concurrently -s first -k 'yarn dev' 'yarn browser-test'"
+    "test:all": "yarn run clear-coverage && yarn run test:unit && yarn run test:e2e && yarn run report:combined",
+    "test:unit": "jest",
+    "test:e2e": "cypress run",
+    "test:e2e-browser": "cypress open",
+    "server-and-test": "concurrently -s first -k 'yarn dev' 'yarn test:e2e'",
+    "mkdir:reports": "mkdir coverage/reports || true",
+    "precopy:reports": "yarn mkdir:reports",
+    "copy:reports": "cp coverage/coverage-cypress/coverage-final.json coverage/reports/from-cypress.json && cp coverage/coverage-final.json coverage/reports/from-jest.json",
+    "precombine:reports": "yarn copy:reports && mkdir .nyc_output || true",
+    "combine:reports": "nyc merge coverage/reports && mv coverage.json .nyc_output/out.json",
+    "prereport:combined": "yarn combine:reports",
+    "report:combined": "nyc report --reporter lcov --reporter text --report-dir coverage/coverage-all --check-coverage",
+    "clear-coverage": "rm -rf .nyc_output && rm -rf coverage"
   },
   "dependencies": {
     "react": ">=16.8.0",
