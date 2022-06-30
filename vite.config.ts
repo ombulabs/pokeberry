@@ -22,7 +22,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@lib': path.resolve(__dirname, './lib'),
-    }
+    },
   },
   build: {
     sourcemap: true,
