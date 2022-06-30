@@ -7,9 +7,6 @@ import * as path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  esbuild: {
-    minify: false,
-  },
   plugins: [
     react(),
     dts({
@@ -22,6 +19,11 @@ export default defineConfig({
       cypress: true,
     }),
   ],
+  resolve: {
+    alias: {
+      '@lib': path.resolve(__dirname, './lib'),
+    }
+  },
   build: {
     sourcemap: true,
     lib: {

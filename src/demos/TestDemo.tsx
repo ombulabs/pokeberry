@@ -1,4 +1,4 @@
-import { useTestHook } from '../../lib/hooks';
+import { useTestHook } from '@lib/hooks';
 
 const MockComponent: React.FC = () => {
   const testHookAcceptedValue = 'bar';

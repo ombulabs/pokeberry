@@ -14,7 +14,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "@lib/*": ["./lib/*"],
+    }
   },
   "include": ["lib", "src", "cypress"],
   "references": [{ "path": "./tsconfig.node.json" }]

@@ -1,4 +1,4 @@
-import { TestComponent } from '../../lib/components';
+import { TestComponent } from '@lib/components';
 
 const NextTest = () => {
   return <TestComponent foo={'bar'} />;

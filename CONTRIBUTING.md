@@ -27,6 +27,8 @@ Inside `src`, we have a demo app for use during development and testing. When ad
 
 After that, you can run `yarn dev` and visit the demo app at `localhost:3000`. You should see a link to your component on the home page.
 
+**Note:** When importing components and hooks into demo pages, you can use a path alias (`@lib/components` or `@lib/hooks`) to avoid figuring out the levels of relative paths.
+
 ## Testing
 
 We use `cypress` for both e2e and unit (component) tests -- make sure to place the test inside the appropriate sub-directory in the `cypress/` directory: e2e tests in `cypress/e2e` and unit tests in `cypress/component`.
