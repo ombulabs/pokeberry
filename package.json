@@ -26,7 +26,13 @@
     "test:e2e": "concurrently -s first -k 'yarn dev' 'yarn cy:run'",
     "test:all": "yarn clear-coverage && yarn test:component && yarn test:e2e && yarn report:cy",
     "report:cy": "nyc report --reporter lcov --reporter text --report-dir coverage/coverage-cypress --check-coverage",
-    "clear-coverage": "rm -rf .nyc_output && rm -rf coverage"
+    "clear-coverage": "rm -rf .nyc_output && rm -rf coverage",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix"
+    ]
   },
   "dependencies": {
     "react": ">=16.8.0",
@@ -57,7 +63,9 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.5.0",
+    "husky": "^8.0.1",
     "istanbul-lib-coverage": "^3.2.0",
+    "lint-staged": "^13.0.3",
     "open-cli": "^7.0.1",
     "prettier": "^2.6.2",
     "react-router-dom": "^6.3.0",
