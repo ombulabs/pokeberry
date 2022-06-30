@@ -1,3 +1,3 @@
-import { useTestHook } from "./TestHook";
+import { useTestHook } from './TestHook';
 
 export { useTestHook };

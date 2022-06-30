@@ -4,11 +4,18 @@
     ".ts",
     ".tsx"
   ],
-  "extends": "/nyc.config.js",
+  "extends": "@istanbuljs/nyc-config-typescript",
   "check-coverage": true,
+  "all": true,
+  "excludeAfterRemap": true,
   "include": [
     "lib/components/**/*.tsx",
     "lib/hooks/**/*.ts"
   ],
+  "exclude": [
+    "lib/**/index.ts",
+    "lib/**/**/index.ts"
+  ],
+  "cache": false,
   "report-dir": "coverage/coverage-cypress"
 }

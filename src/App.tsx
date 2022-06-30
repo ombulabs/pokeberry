@@ -25,7 +25,7 @@ const Home = () => (
   </div>
 );
 
-const  App = () => {
+const App = () => {
   const routes = useRoutes([...DEMOS, { path: '/', element: <Home /> }]);
   const location = useLocation();
 
@@ -39,6 +39,6 @@ const  App = () => {
       <div className='routes-container'>{routes}</div>
     </div>
   );
-}
+};
 
 export default App;
