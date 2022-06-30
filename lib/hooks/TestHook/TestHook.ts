@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export const useTestHook = (foo: string) => {
   const [someState, setSomeState] = useState<string>(foo);

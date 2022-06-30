@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation, useRoutes } from 'react-router-dom';
 import TestDemo from './demos/TestDemo';
-import TestComponent from  '../lib/components/TestComponent/TestComponent'
+import NextTest from './demos/NextTest';
 import './App.css';
 
 const DEMOS = [
@@ -10,8 +10,8 @@ const DEMOS = [
     element: <TestDemo />,
   },
   {
-    path: 'test-component',
-    element: <TestComponent foo='bar'/>,
+    path: 'next-test',
+    element: <NextTest />,
   },
 ];
 
@@ -25,7 +25,7 @@ const Home = () => (
   </div>
 );
 
-const  App = () => {
+const App = () => {
   const routes = useRoutes([...DEMOS, { path: '/', element: <Home /> }]);
   const location = useLocation();
 
@@ -39,6 +39,6 @@ const  App = () => {
       <div className='routes-container'>{routes}</div>
     </div>
   );
-}
+};
 
 export default App;

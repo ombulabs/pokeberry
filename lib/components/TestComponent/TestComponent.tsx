@@ -1,9 +1,9 @@
 export interface TestComponentProps {
-  foo: string
+  foo?: string;
 }
 
 const TestComponent: React.FC<TestComponentProps> = (props) => {
-  return <div>Hello, world!</div>;
+  return <div>Hello, {props.foo === 'bar' ? 'world' : 'test'}!</div>;
 };
 
 export default TestComponent;
