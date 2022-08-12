@@ -96,8 +96,8 @@ export const SwipeCarousel: ForwardRefExoticComponent<
 
     useEffect(() => {
       /* istanbul ignore next */
-      // if (!onIndexChange) return;
-      onIndexChange && onIndexChange(currentIndex);
+      if (!onIndexChange) return;
+      onIndexChange(currentIndex);
     }, [currentIndex, onIndexChange]);
 
     const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
