@@ -26,15 +26,18 @@ export default defineConfig({
   },
   build: {
     sourcemap: true,
+    cssCodeSplit: true,
     lib: {
       entry: path.resolve(__dirname, 'lib/index.ts'),
       name: 'pokeberry',
-      formats: ['es', 'umd'],
+      formats: ['es'],
       fileName: (format) => `pokeberry.${format}.js`,
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
       output: {
+        preserveModules: true,
+        preserveModulesRoot: 'lib',
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
