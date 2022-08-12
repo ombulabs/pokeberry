@@ -1,6 +1,6 @@
 import { Link, useLocation, useRoutes } from 'react-router-dom';
 import TestDemo from './demos/TestDemo';
-import NextTest from './demos/NextTest';
+import CarouselDemo from './demos/CarouselDemo';
 import './App.css';
 
 const DEMOS = [
@@ -9,8 +9,8 @@ const DEMOS = [
     element: <TestDemo />,
   },
   {
-    path: 'next-test',
-    element: <NextTest />,
+    path: 'carousel-demo',
+    element: <CarouselDemo />,
   },
 ];
 

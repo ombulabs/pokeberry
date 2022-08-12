@@ -29,7 +29,7 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
-        printWidth: 80,
+        printWidth: 100,
         trailingComma: 'es5',
         semi: true,
         singleQuote: true,
@@ -42,6 +42,8 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-explcit-any': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
   },
   globals: {
     Cypress: 'readonly',
