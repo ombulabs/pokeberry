@@ -10,7 +10,7 @@ import {
   useRef,
   useState,
 } from 'react';
-import { clamp, filterChildrenByType } from '@lib/utils';
+import { clamp, filterChildrenByType } from '@utils';
 import './SwipeCarousel.css';
 
 export interface SwipeCarouselProps extends React.ComponentPropsWithoutRef<'div'> {

@@ -1,20 +1,11 @@
 {
-  "name": "@ombulabs/pokeberry",
+  "name": "pokeberry",
   "private": true,
   "version": "0.0.1",
-  "files": [
-    "dist",
-    "README.md",
-    "LICENSE"
+  "workspaces": [
+    "packages/*",
+    "sandbox"
   ],
-  "main": "./dist/pokeberry.umd.js",
-  "module": "./dist/pokeberry.es.js",
-  "exports": {
-    ".": {
-      "require": "./dist/pokeberry.umd.js",
-      "import": "./dist/pokeberry.es.js"
-    }
-  },
   "sideEffects": false,
   "license": "MIT",
   "scripts": {

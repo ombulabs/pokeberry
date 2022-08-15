@@ -1,13 +1,8 @@
 import { Link, useLocation, useRoutes } from 'react-router-dom';
-import TestDemo from './demos/TestDemo';
 import CarouselDemo from './demos/CarouselDemo';
 import './App.css';
 
 const DEMOS = [
-  {
-    path: 'test-hook',
-    element: <TestDemo />,
-  },
   {
     path: 'carousel-demo',
     element: <CarouselDemo />,

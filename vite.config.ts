@@ -13,7 +13,7 @@ export default defineConfig({
       insertTypesEntry: true,
     }),
     istanbul({
-      include: 'lib/*',
+      include: 'packages/*',
       exclude: ['node_modules'],
       extension: ['.tsx', '.ts'],
       cypress: true,
@@ -21,28 +21,10 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@lib': path.resolve(__dirname, './lib'),
+      '@utils': path.resolve(__dirname, './utils/index'),
     },
   },
   build: {
     sourcemap: true,
-    cssCodeSplit: true,
-    lib: {
-      entry: path.resolve(__dirname, 'lib/index.ts'),
-      name: 'pokeberry',
-      formats: ['es'],
-      fileName: (format) => `pokeberry.${format}.js`,
-    },
-    rollupOptions: {
-      external: ['react', 'react-dom'],
-      output: {
-        preserveModules: true,
-        preserveModulesRoot: 'lib',
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-        },
-      },
-    },
   },
 });

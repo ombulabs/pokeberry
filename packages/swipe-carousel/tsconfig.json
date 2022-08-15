@@ -15,12 +15,11 @@
     "isolatedModules": false,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "./",
     "paths": {
-      "@utils": ["./utils/index.ts"]
+      "@utils": ["../../utils/index.ts"]
     }
   },
-  "include": ["src", "packages", "utils", "cypress"],
+  "include": ["src"],
   "exclude": ["dist"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
