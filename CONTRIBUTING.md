@@ -2,8 +2,8 @@
 
 ## Required:
 
-* `node`
-* `yarn` (v1)
+- `node`
+- `yarn` (v1)
 
 ## Getting started
 
@@ -13,21 +13,19 @@ cd pokeberry
 yarn install
 ```
 
-## `/lib`
+## `/packages`
 
-The components and hooks themselves live in the `/lib` directory. When adding a new component or hook, make sure to add an export from the `index.ts` file in the appropriate directory (`lib/components` and `lib/hooks`, respectively).
+The components live in the `/packages` directory. Each one is an individual `npm` package (meaning they each have a `package.json`, `LICENSE`, `README.md`, and appropriate config files). Right now, the process for adding a new package is manual (copy/paste from another package and replace names), but we are going to automate this soon.
 
 ## `/src`
 
 Inside `src`, we have a demo app for use during development and testing. When adding a new demo, make sure you:
 
-* add it in the `src/demos` folder
-* import the component into `src/App.tsx`
-* add the component to the `DEMOS` array with the following format: `{ path: 'my-component', element: <MyComponent /> }`
+- add it in the `src/demos` folder
+- import the component into `src/App.tsx`
+- add the component to the `DEMOS` array with the following format: `{ path: 'my-component', element: <MyComponent /> }`
 
 After that, you can run `yarn dev` and visit the demo app at `localhost:3000`. You should see a link to your component on the home page.
-
-**Note:** When importing components and hooks into demo pages, you can use a path alias (`@lib/components` or `@lib/hooks`) to avoid figuring out the levels of relative paths.
 
 ## Testing
 
@@ -36,8 +34,9 @@ We use `cypress` for both e2e and unit (component) tests -- make sure to place t
 You can run the unit tests with `yarn test:component` without having a dev server already running.
 
 For e2e tests you have two options:
-* with the dev server running in one terminal, open another and run `yarn cy:run`
-* run `yarn test:e2e` -- this will run the dev server *and* `cypress` for you, using `concurrently` to manage each process.
+
+- with the dev server running in one terminal, open another and run `yarn cy:run`
+- run `yarn test:e2e` -- this will run the dev server _and_ `cypress` for you, using `concurrently` to manage each process.
 
 When writing e2e tests, make sure you call `cy.visit()` with the appropriate path (the one you defined inside `src/App.tsx`).
 

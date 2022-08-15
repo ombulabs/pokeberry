@@ -4,8 +4,7 @@ import {
   SwipeCarouselItem,
   SwipeCarouselIndicator,
   SwipeCarouselRef,
-} from '@lib/components';
-
+} from '../../packages/swipe-carousel/src';
 const items = [
   { title: 'Item 1', body: 'Lorem ipsum blah blah blah' },
   { title: 'Item 2', body: 'Lorem ipsum blah blah blah' },
