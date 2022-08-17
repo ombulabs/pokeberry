@@ -11,7 +11,7 @@ import {
   useState,
 } from 'react';
 import { clamp, filterChildrenByType } from '@utils';
-import './SwipeCarousel.css';
+import './SwipeCarousel.scss';
 
 export interface SwipeCarouselProps extends React.ComponentPropsWithoutRef<'div'> {
   onIndexChange?: (currentIndex: number) => void;
@@ -129,19 +129,8 @@ export const SwipeCarousel: ForwardRefExoticComponent<
             'pokeberry-swipe-carousel__outer-container' +
             `${hideScrollbar ? ' hide-scrollbar' : ''} ${className}`
           }
-          style={{
-            position: 'relative',
-            overflowX: 'scroll',
-            scrollSnapType: 'x mandatory',
-          }}
         >
-          <div
-            ref={innerRef}
-            className='pokeberry-swipe-carousel__inner-container'
-            style={{
-              display: 'flex',
-            }}
-          >
+          <div ref={innerRef} className='pokeberry-swipe-carousel__inner-container'>
             {items}
           </div>
         </div>
@@ -161,10 +150,7 @@ export const SwipeCarouselItem = ({ children, className = '' }: SwipeCarouselIte
   const { scrollSnapStyles } = useContext(ComponentContext);
 
   return (
-    <div
-      className={`pokeberry-swipe-carousel__item ${className}`}
-      style={{ ...scrollSnapStyles, minWidth: '100%' }}
-    >
+    <div className={`pokeberry-swipe-carousel__item ${className}`} style={{ ...scrollSnapStyles }}>
       {children}
     </div>
   );

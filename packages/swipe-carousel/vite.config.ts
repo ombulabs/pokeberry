@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
+import copy from 'rollup-plugin-copy';
 import * as path from 'path';
 
 export default defineConfig({
@@ -24,6 +25,12 @@ export default defineConfig({
       fileName: (format) => `swipe-carousel.${format}.js`,
     },
     rollupOptions: {
+      plugins: [
+        copy({
+          targets: [{ src: 'src/*.scss', dest: 'dist', rename: 'style.scss' }],
+          hook: 'writeBundle',
+        }),
+      ],
       external: ['react', 'react-dom'],
       output: {
         globals: {
