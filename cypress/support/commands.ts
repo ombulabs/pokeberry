@@ -4,7 +4,7 @@
 // create various custom commands and overwrite
 // existing commands.
 //
-// For more comprehensive examples of custom
+// For more comprehensive examples1 of custom
 // commands please read more here:
 // https://on.cypress.io/custom-commands
 // ***********************************************

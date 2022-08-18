@@ -7,14 +7,7 @@
     "README.md",
     "LICENSE"
   ],
-  "main": "./dist/swipe-carousel.umd.js",
-  "module": "./dist/swipe-carousel.es.js",
-  "exports": {
-    ".": {
-      "require": "./dist/swipe-carousel.umd.js",
-      "import": "./dist/swipe-carousel.es.js"
-    }
-  },
+  "main": "src/index.ts",
   "sideEffects": false,
   "license": "MIT",
   "scripts": {

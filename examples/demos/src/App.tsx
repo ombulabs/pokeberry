@@ -1,5 +1,5 @@
 import { Link, useLocation, useRoutes } from 'react-router-dom';
-import CarouselDemo from './demos/CarouselDemo';
+import CarouselDemo from './items/CarouselDemo';
 import './App.css';
 
 const DEMOS = [
