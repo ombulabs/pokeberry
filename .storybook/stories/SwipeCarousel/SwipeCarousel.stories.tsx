@@ -4,7 +4,11 @@ import {
   SwipeCarouselItem,
   SwipeCarouselIndicator,
   SwipeCarouselRef,
-} from '@pokeberry/swipe-carousel';
+} from '@pokeberry/swipe-carousel/src/SwipeCarousel';
+import {storiesOf} from "@storybook/react";
+
+export const rootStories = storiesOf('@pokeberry', module);
+
 const items = [
   { title: 'Item 1', body: 'Lorem ipsum blah blah blah' },
   { title: 'Item 2', body: 'Lorem ipsum blah blah blah' },
@@ -12,7 +16,7 @@ const items = [
   { title: 'Item 4', body: 'Lorem ipsum blah blah blah' },
 ];
 
-const CarouselDemo = () => {
+rootStories.add('SwipeCarousel', () => {
   const [demo, setDemo] = useState(items[0].title);
   const carousel = useRef<SwipeCarouselRef>(null);
 
@@ -44,6 +48,4 @@ const CarouselDemo = () => {
       </SwipeCarousel>
     </>
   );
-};
-
-export default CarouselDemo;
+});

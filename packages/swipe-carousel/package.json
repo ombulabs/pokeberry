@@ -2,19 +2,14 @@
   "name": "@pokeberry/swipe-carousel",
   "private": false,
   "version": "0.0.1",
-  "files": [
-    "dist",
-    "README.md",
-    "LICENSE"
-  ],
-  "main": "src/index.ts",
+  "main": "dist/index.ts",
+  "module": "dist/index.es.ts",
   "sideEffects": false,
   "license": "MIT",
   "scripts": {
-    "dev": "vite",
     "build": "tsc && vite build"
   },
-  "dependencies": {
+  "devDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },
