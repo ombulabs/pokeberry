@@ -1,9 +1,10 @@
 {
   "name": "@pokeberry/swipe-carousel",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "dist/index.ts",
   "module": "dist/index.es.ts",
+  "types": "dist/types",
   "sideEffects": false,
   "license": "MIT",
   "scripts": {
