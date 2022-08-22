@@ -15,7 +15,13 @@ yarn install
 
 ## `/packages`
 
-The components live in the `/packages` directory. Each one is an individual `npm` package (meaning they each have a `package.json`, `LICENSE`, `README.md`, and appropriate config files). Right now, the process for adding a new package is manual (copy/paste from another package and replace names), but we are going to automate this soon.
+The components live in the `/packages` directory. Each one is an individual `npm` package (meaning they each have a `package.json`, `LICENSE`, `README.md`, and appropriate config files). To scaffold a new component package, run the following command:
+
+```bash
+yarn new:component <your-component-name> # name must be kebab-case
+```
+
+This will scaffold a new package with all of the necessary files and configurations.
 
 ## `/src`
 
