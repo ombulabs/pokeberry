@@ -1271,7 +1271,7 @@
   resolved "https://registry.yarnpkg.com/@isaacs/string-locale-compare/-/string-locale-compare-1.1.0.tgz#291c227e93fd407a96ecd59879a35809120e432b"
   integrity sha512-SQ7Kzhh9+D+ZW9MA0zkYv3VXhIDNx+LzM6EJ+/65I3QY+enU6Itte7E5XX7EWrqLW2FN4n06GWzBnPoC3th2aQ==
 
-"@istanbuljs/load-nyc-config@^1.0.0":
+"@istanbuljs/load-nyc-config@^1.0.0", "@istanbuljs/load-nyc-config@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@istanbuljs/load-nyc-config/-/load-nyc-config-1.1.0.tgz#fd3db1d59ecf7cf121e80650bb86712f9b55eced"
   integrity sha512-VjeHSlIzpv/NyD3N0YuHfXOPDIixcA1q2ZV98wsMqcYlPmv2n3Yb2lYP9XMElnaFVXg5A7YLTeLu6V84uQDjmQ==
@@ -9094,7 +9094,7 @@ istanbul-lib-instrument@^4.0.0:
     istanbul-lib-coverage "^3.0.0"
     semver "^6.3.0"
 
-istanbul-lib-instrument@^5.0.4:
+istanbul-lib-instrument@^5.0.4, istanbul-lib-instrument@^5.1.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/istanbul-lib-instrument/-/istanbul-lib-instrument-5.2.0.tgz#31d18bdd127f825dd02ea7bfdfd906f8ab840e9f"
   integrity sha512-6Lthe1hqXHBNsqvgDzGO6l03XNeu3CrG4RqQ1KM9+l5+jNGpEJfIELx1NS3SEHmJQA8np/u+E4EPRKRiu6m19A==
@@ -14146,6 +14146,16 @@ vite-plugin-dts@^1.4.1:
     fast-glob "^3.2.11"
     fs-extra "^10.0.1"
     ts-morph "^14.0.0"
+
+vite-plugin-istanbul@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-istanbul/-/vite-plugin-istanbul-3.0.0.tgz#f64e8342553d2f39a99cbe0029f569dc8d02d186"
+  integrity sha512-cQ6TZ0VgFpPz0FKlfg9O7cpAqaB7iMXdiEolgTgBixA9kxi6O+VRVy1Z/vJ93TWsfub9V0t+rpHKKYJkt4VdUg==
+  dependencies:
+    "@istanbuljs/load-nyc-config" "^1.1.0"
+    istanbul-lib-instrument "^5.1.0"
+    picocolors "^1.0.0"
+    test-exclude "^6.0.0"
 
 vite@^3.0.8:
   version "3.0.8"
