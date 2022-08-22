@@ -15,7 +15,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@utils': path.resolve('../utils/index.ts'),
+      '@utils': path.resolve('../../utils/index.ts'),
     },
   },
   build: {

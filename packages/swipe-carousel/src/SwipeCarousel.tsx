@@ -11,7 +11,7 @@ import {
   useState,
 } from 'react';
 // TODO: If replace to @utils will fall down with an error that module doesn't exist
-import { clamp, filterChildrenByType } from '../../utils';
+import { clamp, filterChildrenByType } from '../../../utils';
 import './SwipeCarousel.scss';
 
 export interface SwipeCarouselProps extends React.ComponentPropsWithoutRef<'div'> {
