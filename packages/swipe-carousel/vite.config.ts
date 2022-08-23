@@ -23,8 +23,8 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'swipe-carousel',
-      formats: ['es'],
-      fileName: (format) => `index.${format}.js`,
+      formats: ['es', 'umd'],
+      fileName: 'index',
     },
     rollupOptions: {
       plugins: [

@@ -2,9 +2,18 @@
   "name": "@pokeberry/swipe-carousel",
   "private": false,
   "version": "0.1.0",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "files": ["dist"],
+  "type": "module",
+  "main": "dist/index.umd.cjs",
+  "module": "dist/index.js",
   "types": "dist/types",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs",
+      "types": "./dist/types"
+    }
+  },
   "sideEffects": false,
   "license": "MIT",
   "scripts": {
