@@ -8,5 +8,5 @@
     },
     "jsx": "react-jsx"
   },
-  "include": ["cypress", "**/*.ts", "../node_modules/cypress"]
+  "include": ["cypress", "**/*.ts", "**/*.tsx", "../node_modules/cypress"]
 }

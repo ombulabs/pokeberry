@@ -23,17 +23,17 @@ yarn new:component <your-component-name> # name must be kebab-case
 
 This will scaffold a new package with all of the necessary files and configurations.
 
-## `/src`
+## `storybook`
 
-Inside `src`, we have a demo app for use during development and testing. When adding a new demo, make sure you:
+When you scaffold a new component, it will include a `.stories.tsx` file. You can use this as a sandbox for developing your component. You can start up `storybook` by running:
 
-- add it in the `src/demos` folder
-- import the component into `src/App.tsx`
-- add the component to the `DEMOS` array with the following format: `{ path: 'my-component', element: <MyComponent /> }`
-
-After that, you can run `yarn dev` and visit the demo app at `localhost:3000`. You should see a link to your component on the home page.
+```bash
+yarn dev
+```
 
 ## Testing
+
+(Our testing solution is still a WIP. This section will change when we implement a better way to integrate `storybook` and `cypress`)
 
 We use `cypress` for both e2e and unit (component) tests -- make sure to place the test inside the appropriate sub-directory in the `cypress/` directory: e2e tests in `cypress/e2e` and unit tests in `cypress/component`.
 
