@@ -1,29 +1,23 @@
 {
   "name": "@pokeberry/swipe-carousel",
   "private": false,
-  "version": "0.0.1",
-  "files": [
-    "dist",
-    "README.md",
-    "LICENSE"
-  ],
-  "main": "./dist/swipe-carousel.umd.js",
-  "module": "./dist/swipe-carousel.es.js",
+  "version": "0.1.0",
+  "files": ["dist"],
+  "type": "module",
+  "main": "dist/index.umd.cjs",
+  "module": "dist/index.js",
+  "types": "dist/types",
   "exports": {
     ".": {
-      "require": "./dist/swipe-carousel.umd.js",
-      "import": "./dist/swipe-carousel.es.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs",
+      "types": "./dist/types"
     }
   },
   "sideEffects": false,
   "license": "MIT",
   "scripts": {
-    "dev": "vite",
     "build": "tsc && vite build"
-  },
-  "dependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
   },
   "peerDependencies": {
     "react": ">=16.8.0",

@@ -8,6 +8,8 @@ export default defineConfig({
   plugins: [
     react(),
     dts({
+      outputDir: './dist/types',
+      entryRoot: './src',
       insertTypesEntry: true,
     }),
   ],
@@ -21,8 +23,8 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'swipe-carousel',
-      formats: ['es'],
-      fileName: (format) => `swipe-carousel.${format}.js`,
+      formats: ['es', 'umd'],
+      fileName: 'index',
     },
     rollupOptions: {
       plugins: [

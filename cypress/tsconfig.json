@@ -1,9 +1,11 @@
 {
-  "extends": "../tsconfig.json",
   "compilerOptions": {
     "noEmit": true,
     "types": ["cypress", "node"],
     "isolatedModules": false,
+    "paths": {
+      "@pokeberry/swipe-carousel": ["../../packages/swipe-carousel"]
+    }
   },
   "include": [
     "cypress",

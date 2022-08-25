@@ -1,10 +1,6 @@
 import { useRef, useState } from 'react';
-import {
-  SwipeCarousel,
-  SwipeCarouselItem,
-  SwipeCarouselIndicator,
-  SwipeCarouselRef,
-} from '../../packages/swipe-carousel/src';
+import { SwipeCarousel, SwipeCarouselItem, SwipeCarouselIndicator, SwipeCarouselRef } from '.';
+
 const items = [
   { title: 'Item 1', body: 'Lorem ipsum blah blah blah' },
   { title: 'Item 2', body: 'Lorem ipsum blah blah blah' },
@@ -12,7 +8,7 @@ const items = [
   { title: 'Item 4', body: 'Lorem ipsum blah blah blah' },
 ];
 
-const CarouselDemo = () => {
+export const SwipeCarouselExample = () => {
   const [demo, setDemo] = useState(items[0].title);
   const carousel = useRef<SwipeCarouselRef>(null);
 
@@ -45,5 +41,4 @@ const CarouselDemo = () => {
     </>
   );
 };
-
-export default CarouselDemo;
+export default { title: '@pokeberry' };
