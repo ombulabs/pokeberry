@@ -26,11 +26,13 @@ export const SwipeCarouselExample = () => {
       <button className='scroll-to-next-button' onClick={scrollTo}>
         Scroll
       </button>
-      <h1 className='current-item'>{demo}</h1>
+      <h1 className='current-item' style={{ textAlign: 'center' }}>
+        {demo}
+      </h1>
       <SwipeCarousel className='demo-1' ref={carousel} onIndexChange={handleIndexChange}>
         {items.map((item) => (
           <SwipeCarouselItem key={item.title}>
-            <div key={item.title}>
+            <div style={{ textAlign: 'center' }}>
               <h2>{item.title}</h2>
               <p>{item.body}</p>
             </div>
