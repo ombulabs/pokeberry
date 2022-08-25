@@ -9,6 +9,7 @@
       "ignoreChanges": [".spec.ts", ".stories.ts"]
     }
   },
+  "useWorkspaces": true,
   "packages": ["packages/*"],
   "version": "independent"
 }
