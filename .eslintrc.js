@@ -10,6 +10,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:cypress/recommended',
     'prettier',
+    'plugin:storybook/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {

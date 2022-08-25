@@ -1,8 +1,14 @@
 {
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "useNx": true,
-  "useWorkspaces": true,
-  "version": "0.1.0",
   "registry": "https://registry.npmjs.org",
-  "npmClient": "yarn"
+  "npmClient": "yarn",
+  "command": {
+    "publish": {
+      "allowBranch": "main",
+      "ignoreChanges": [".spec.ts", ".stories.ts"]
+    }
+  },
+  "packages": ["packages/*"],
+  "version": "independent"
 }
