@@ -9,6 +9,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "yarn storybook",
+    "build": "lerna run build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "cy:run": "cypress run",
