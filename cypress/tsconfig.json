@@ -5,11 +5,8 @@
     "isolatedModules": false,
     "paths": {
       "@pokeberry/swipe-carousel": ["../../packages/swipe-carousel"]
-    }
+    },
+    "jsx": "react-jsx"
   },
-  "include": [
-    "cypress",
-    "**/*.ts",
-    "../node_modules/cypress",
-  ],
+  "include": ["cypress", "**/*.ts", "../node_modules/cypress"]
 }
