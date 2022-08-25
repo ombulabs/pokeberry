@@ -27,3 +27,4 @@ dist-ssr
 coverage
 .nyc_output
 cypress/videos
+storybook-static
