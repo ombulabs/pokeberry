@@ -2,7 +2,7 @@ import {
   SwipeCarousel,
   SwipeCarouselIndicator,
   SwipeCarouselItem,
-} from '@pokeberry/swipe-carousel/src';
+} from '@pokeberry/swipe-carousel';
 
 const items = [
   { title: 'Item 1', body: 'Lorem ipsum blah blah blah' },

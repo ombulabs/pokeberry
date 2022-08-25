@@ -7,7 +7,6 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/addon-a11y",
-    "storybook-dark-mode",
     "storybook-addon-react-docgen"
   ],
   framework: '@storybook/react',
@@ -24,10 +23,6 @@ module.exports = {
             find: "@utils",
             replacement: path.resolve(__dirname, "../utils"),
           },
-          {
-            find: '@pokeberry/swipe-carousel/src',
-            replacement: path.resolve(__dirname, "../packages/swipe-carousel/src"),
-          }
         ]
       }
     }
