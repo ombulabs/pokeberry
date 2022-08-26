@@ -1,34 +1,33 @@
-import {
-  SwipeCarousel,
-  SwipeCarouselIndicator,
-  SwipeCarouselItem,
-} from '@pokeberry/swipe-carousel';
+import { composeStories } from '@storybook/testing-react';
+import * as stories from '../../packages/swipe-carousel/src/SwipeCarousel.stories';
 
-const items = [
-  { title: 'Item 1', body: 'Lorem ipsum blah blah blah' },
-  { title: 'Item 2', body: 'Lorem ipsum blah blah blah' },
-  { title: 'Item 3', body: 'Lorem ipsum blah blah blah' },
-  { title: 'Item 4', body: 'Lorem ipsum blah blah blah' },
-];
+const { SwipeCarouselStory } = composeStories(stories);
 
-describe('SwipeCarousel', () => {
-  it('should render carousel', () => {
-    cy.mount(
-      <SwipeCarousel className='demo-1'>
-        {items.map((item) => (
-          <SwipeCarouselItem key={item.title}>
-            <div key={item.title}>
-              <h2>{item.title}</h2>
-              <p>{item.body}</p>
-            </div>
-          </SwipeCarouselItem>
-        ))}
-        <SwipeCarouselIndicator />
-      </SwipeCarousel>
-    );
+describe('swipe-carousel', () => {
+  const WIDTH = Cypress.config('viewportWidth');
+
+  beforeEach(() => {
+    cy.mount(<SwipeCarouselStory />);
+  });
+
+  it('displays the Carousel items', () => {
     cy.contains('Item 1');
-    cy.contains('Item 2');
-    cy.contains('Item 3');
-    cy.contains('Item 4');
+  });
+
+  it('calls the onIndexChange callback', () => {
+    cy.get('.pokeberry-swipe-carousel__outer-container').scrollTo(WIDTH, 0);
+    cy.get('.current-item').should('contain.text', 'Item 2');
+  });
+
+  it('scrolls with the scrollToNext method', () => {
+    cy.contains('Scroll').click();
+    cy.get('.current-item').should('contain.text', 'Item 2');
+    cy.contains('Scroll').click();
+    cy.get('.current-item').should('contain.text', 'Item 3');
+    cy.contains('Scroll').click();
+    cy.get('.current-item').should('contain.text', 'Item 4');
+    cy.contains('Scroll').click();
+    // nothing should happen the last time
+    cy.get('.current-item').should('contain.text', 'Item 4');
   });
 });

@@ -1,13 +1,18 @@
 import { defineConfig } from 'cypress';
+import { devServer } from '@cypress/vite-dev-server';
 import del from 'del';
 
 export default defineConfig({
   component: {
-    devServer: {
-      framework: 'react',
-      bundler: 'vite',
-    },
     specPattern: 'cypress/component/**/*.spec.{js,jsx,ts,tsx}',
+    screenshotOnRunFailure: false,
+    devServer(devServerConfig) {
+      return devServer({
+        ...devServerConfig,
+        framework: 'react',
+        viteConfig: require('./vite.config'),
+      });
+    },
     setupNodeEvents(on, config) {
       // @ts-ignore
       on('after:spec', (_, results) => {
@@ -22,6 +27,7 @@ export default defineConfig({
   e2e: {
     baseUrl: 'http://localhost:6006',
     specPattern: 'cypress/e2e/**/*.spec.{js,jsx,ts,tsx}',
+    screenshotOnRunFailure: false,
     setupNodeEvents(on, config) {
       // @ts-ignore
       on('after:spec', (_, results) => {

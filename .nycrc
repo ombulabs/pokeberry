@@ -5,7 +5,7 @@
   "all": true,
   "excludeAfterRemap": true,
   "include": ["packages/**/*.tsx"],
-  "exclude": ["packages/**/index.ts", "packages/**/**/index.ts"],
+  "exclude": ["packages/**/index.ts", "packages/**/**/index.ts", "packages/**/*.stories.tsx"],
   "cache": false,
   "report-dir": "coverage/coverage-cypress"
 }
