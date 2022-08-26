@@ -33,7 +33,7 @@ yarn dev
 
 ## Testing
 
-Tests live in the `cypress/component` directory (a new test should be added for you when you scaffold a new component).
+We use `cypress` for unit/integration testing components. Tests live in the `cypress/component` directory (a new test should be added for you when you scaffold a new component).
 
 You can run the unit tests with `yarn test` without having to start the dev server. If you want to run tests in `open` mode, run `yarn test:open`.
 
