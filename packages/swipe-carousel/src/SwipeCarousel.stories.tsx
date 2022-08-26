@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { SwipeCarousel, SwipeCarouselItem, SwipeCarouselIndicator, SwipeCarouselRef } from '.';
 
 const items = [
@@ -8,7 +9,7 @@ const items = [
   { title: 'Item 4', body: 'Lorem ipsum blah blah blah' },
 ];
 
-export const SwipeCarouselExample = () => {
+export const SwipeCarouselStory: ComponentStory<typeof SwipeCarousel> = () => {
   const [demo, setDemo] = useState(items[0].title);
   const carousel = useRef<SwipeCarouselRef>(null);
 
@@ -43,4 +44,6 @@ export const SwipeCarouselExample = () => {
     </>
   );
 };
-export default { title: '@pokeberry' };
+export default { title: 'swipe-carousel', component: SwipeCarousel } as ComponentMeta<
+  typeof SwipeCarousel
+>;
